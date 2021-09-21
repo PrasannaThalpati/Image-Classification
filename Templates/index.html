@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link href="{{ url_for('static',filename='C:/Users/Prasanna/PycharmProject/Image_Classification/Static/style_index.css') }}" rel="stylesheet">
+    <title>Image Prediction</title>
+    
+
+</head>
+    <body>
+    
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                  <div class="heading">Image Classification</a></div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <div class="head-name">
+            <h2 style="margin-left: 370px; margin-top: 10px;">Cat or Dog Prediction</h2>
+          </div>
+          
+          
+          <!---Input Field-->
+        <form action="/success" method="post" enctype="multipart/form-data" style="margin-left: 200px;">
+                <div class="input-field" style="padding-right:200px;">
+                    <input type="file" class="form-control" required name="my_image" id="inputGroupFile02">
+                </div>
+            </div>
+          </div>
+
+
+
+            <!--Prediction Button-->
+            <div class="predict-button">
+                <button type="submit" class="btn btn-primary" style="margin-left: 290px; margin-top: 20px;">Predict</button>
+            </div>
+            </form>
+
+
+        {% if pred %}
+            <h1 style="margin-left: 440px; margin-top: 40px;" class="last">
+                {{pred}}</h1>
+        {% endif %}
+
+
+     {% if pred1 %}
+            <h1 style="margin-left: 440px; margin-top: 40px;" class="last">
+                {{pred1}}</h1>
+        {% endif %}
+    
+    </body>
+</html>

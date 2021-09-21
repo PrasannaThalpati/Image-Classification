@@ -1,0 +1,25 @@
+
+
+.heading{
+    text-align: center;
+}
+
+
+.input-field{
+    padding-top: 00px;
+    width: 500px;
+}
+
+.predict-button{
+    padding-top: 15px;
+    padding-left: 470px;
+
+}
+
+.head-name{
+    text-align: center;
+    text-decoration: solid;
+    padding-top: 20px;
+    padding-right: 75px;
+
+}
